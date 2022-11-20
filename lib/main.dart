@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter CV',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        fontFamily: GoogleFonts.poppins().fontFamily,
+        fontFamily: GoogleFonts.spaceGrotesk().fontFamily,
       ),
       home: const MainDashboard(),
     );

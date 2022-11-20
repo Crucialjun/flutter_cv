@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_cv/utils/global_constants.dart';
+import 'package:flutter_cv/utils/main_dashboard_controller.dart';
 
 class MainDashboard extends StatelessWidget {
   const MainDashboard({Key? key}) : super(key: key);
@@ -50,26 +51,48 @@ class MainDashboard extends StatelessWidget {
                 top: 168,
                 left: 0,
                 child: Column(
-                  children: const [
-                    Text(
+                  children: [
+                    const Text(
                       "Nicholas Otieno",
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 8,
                     ),
-                    Text(
+                    const Text(
                       "Android Developer",
                       textAlign: TextAlign.center,
                     ),
-                    Text(
+                    const Text(
                       "Flutter Developer",
                       textAlign: TextAlign.center,
                     ),
-                    Text(
-                      "Network Administrator at Achiel Technology Solutions",
-                      textAlign: TextAlign.center,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          "Network Administrator at",
+                          textAlign: TextAlign.center,
+                        ),
+                        InkWell(
+                          onTap: (() {
+                            MainDashBoardController()
+                                .launchSpecifiedUrl('https://flutter.io');
+                          }),
+                          child: const Text(
+                            " Achiel Technology Solutions",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                decoration: TextDecoration.underline,
+                                color: Colors.blue,
+                                fontWeight: FontWeight.w400),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ))
