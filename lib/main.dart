@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cv/main_dashboard.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter CV',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: GoogleFonts.poppins().fontFamily,
       ),
       home: const MainDashboard(),
     );
