@@ -20,37 +20,39 @@ class MainDashboard extends StatelessWidget {
         backgroundColor: main_color,
       ),
       body: SingleChildScrollView(
-        child: Column(children: [
-          Stack(
-            children: [
-              Container(
-                height: 800,
-                color: background_grey,
-              ),
-              Container(
-                height: 100,
-                decoration: const BoxDecoration(
-                    color: main_color,
-                    borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(24),
-                        bottomRight: Radius.circular(24))),
-              ),
-              const Positioned(
-                left: 0,
-                right: 0,
-                top: 24,
-                child: CircleAvatar(
-                  backgroundColor: background_grey,
-                  radius: 68,
+        child: Column(
+          children: [
+            Stack(
+              children: [
+                Container(
+                  height: 800,
+                  color: Colors.white,
+                ),
+                Container(height: 650, color: background_grey),
+                Container(
+                  height: 80,
+                  decoration: const BoxDecoration(
+                      color: main_color,
+                      borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(24),
+                          bottomRight: Radius.circular(24))),
+                ),
+                const Positioned(
+                  left: 0,
+                  right: 0,
+                  top: 20,
                   child: CircleAvatar(
-                    radius: 60,
-                    backgroundImage: AssetImage('assets/profile.jpeg'),
+                    backgroundColor: background_grey,
+                    radius: 52,
+                    child: CircleAvatar(
+                      radius: 48,
+                      backgroundImage: AssetImage('assets/profile.jpeg'),
+                    ),
                   ),
                 ),
-              ),
-              Positioned(
+                Positioned(
                   right: 0,
-                  top: 168,
+                  top: 120,
                   left: 0,
                   child: Column(
                     children: [
@@ -59,11 +61,11 @@ class MainDashboard extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: Colors.black,
-                            fontSize: 20,
+                            fontSize: 18,
                             fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(
-                        height: 8,
+                        height: 4,
                       ),
                       const Text(
                         "Android Developer",
@@ -245,11 +247,12 @@ class MainDashboard extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(
-                        height: 8,
+                        height: 4,
                       ),
                       const Padding(
                         padding: EdgeInsets.only(left: 16, right: 16),
                         child: Divider(
+                          thickness: 2,
                           color: Colors.grey,
                         ),
                       ),
@@ -261,12 +264,26 @@ class MainDashboard extends StatelessWidget {
                             textAlign: TextAlign.center,
                           ),
                         ),
-                      )
+                      ),
                     ],
-                  ))
-            ],
-          )
-        ]),
+                  ),
+                ),
+                Positioned(
+                    top: 600,
+                    left: 0,
+                    right: 0,
+                    child: Container(
+                      margin: const EdgeInsets.only(left: 20, right: 20),
+                      width: MediaQuery.of(context).size.width,
+                      height: 400,
+                      color: Colors.blue,
+                      child: const SizedBox(width: 200, height: 200),
+                    )),
+              ],
+            ),
+            const Text("Test")
+          ],
+        ),
       ),
     );
   }
