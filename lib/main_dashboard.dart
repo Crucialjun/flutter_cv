@@ -25,7 +25,7 @@ class MainDashboard extends StatelessWidget {
             Stack(
               children: [
                 Container(
-                  height: 800,
+                  height: MediaQuery.of(context).size.height,
                   color: Colors.white,
                 ),
                 Container(height: 650, color: background_grey),
@@ -272,16 +272,45 @@ class MainDashboard extends StatelessWidget {
                     top: 600,
                     left: 0,
                     right: 0,
-                    child: Container(
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50),
+                      ),
+                      elevation: 8,
                       margin: const EdgeInsets.only(left: 20, right: 20),
-                      width: MediaQuery.of(context).size.width,
-                      height: 400,
-                      color: Colors.blue,
-                      child: const SizedBox(width: 200, height: 200),
+                      child: Container(
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(color: background_grey),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(24))),
+                          width: MediaQuery.of(context).size.width,
+                          height: 400,
+                          child: GridView.count(
+                            padding: const EdgeInsets.all(48),
+                            crossAxisCount: 2,
+                            crossAxisSpacing: 16,
+                            mainAxisSpacing: 16,
+                            childAspectRatio: (1 / 0.8),
+                            shrinkWrap: true,
+                            children: [
+                              Container(
+                                  width: 40, height: 40, color: main_color),
+                              Container(
+                                width: 40,
+                                height: 40,
+                                color: Colors.blue,
+                              ),
+                              Container(
+                                width: 40,
+                                height: 40,
+                                color: Colors.blue,
+                              ),
+                            ],
+                          )),
                     )),
               ],
             ),
-            const Text("Test")
           ],
         ),
       ),
