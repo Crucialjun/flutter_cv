@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_cv/utils/global_constants.dart';
 import 'package:flutter_cv/utils/main_dashboard_controller.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MainDashboard extends StatelessWidget {
@@ -295,7 +296,24 @@ class MainDashboard extends StatelessWidget {
                             shrinkWrap: true,
                             children: [
                               Container(
-                                  width: 40, height: 40, color: main_color),
+                                width: 40,
+                                height: 40,
+                                color: main_color,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    SvgPicture.asset(
+                                      "assets/experience_icon.svg",
+                                      color: Colors.white,
+                                      height: 48,
+                                    ),
+                                    const SizedBox(
+                                      height: 8,
+                                    ),
+                                    const Text("Experience")
+                                  ],
+                                ),
+                              ),
                               Container(
                                 width: 40,
                                 height: 40,
