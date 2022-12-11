@@ -1,6 +1,10 @@
-# flutter_cv
+# FLUTTER_CV
 
-A new Flutter project.
+My Cv is a flutter project to create my CV in  form of an app using Flutter
+
+## Screenshots
+
+![Landing Page](https://drive.google.com/file/d/1-0ndXDdgD5ePBaj5xW7uNQnd3z4X_bLQ/view?usp=sharing
 
 ## Getting Started
 
