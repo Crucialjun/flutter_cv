@@ -4,7 +4,7 @@ My Cv is a flutter project to create my CV in  form of an app using Flutter
 
 ## Screenshots
 
-![Landing Page](https://drive.google.com/file/d/1-0ndXDdgD5ePBaj5xW7uNQnd3z4X_bLQ/view?usp=sharing)
+![Landing Page](https://lh5.googleusercontent.com/D9irTu2NqylEKezko5y3HhL_5SfjVx_LQh25FE372IFavGoPw7HAGUn5Q742LcCehgA=w2400)
 
 ## Getting Started
 
