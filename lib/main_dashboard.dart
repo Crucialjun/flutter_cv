@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_cv/experience_screen.dart';
 import 'package:flutter_cv/utils/global_constants.dart';
 import 'package:flutter_cv/utils/main_dashboard_controller.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_cv/widgets/contact_item.dart';
+import 'package:flutter_cv/widgets/cv_item.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MainDashboard extends StatelessWidget {
@@ -103,36 +105,16 @@ class MainDashboard extends StatelessWidget {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Icon(
-                              FontAwesomeIcons.locationDot,
-                              color: main_color,
-                            ),
-                            SizedBox(
-                              width: 4,
-                            ),
-                            Text("Nairobi, Kenya"),
-                          ],
-                        ),
-                        const SizedBox(
+                      children: const [
+                        ContactItem(
+                            icon: FontAwesomeIcons.locationDot,
+                            title: "Nairobi, Kenya"),
+                        SizedBox(
                           width: 16,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Icon(
-                              FontAwesomeIcons.envelope,
-                              color: main_color,
-                            ),
-                            SizedBox(
-                              width: 4,
-                            ),
-                            Text("nich.otieno@gmail.com"),
-                          ],
-                        ),
+                        ContactItem(
+                            icon: FontAwesomeIcons.envelope,
+                            title: "nich.otieno@gmail.com")
                       ],
                     ),
                     const SizedBox(
@@ -140,36 +122,16 @@ class MainDashboard extends StatelessWidget {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Icon(
-                              FontAwesomeIcons.phone,
-                              color: main_color,
-                            ),
-                            SizedBox(
-                              width: 4,
-                            ),
-                            Text("+254726575615"),
-                          ],
-                        ),
-                        const SizedBox(
+                      children: const [
+                        ContactItem(
+                            icon: FontAwesomeIcons.phone,
+                            title: "+254726575615"),
+                        SizedBox(
                           width: 16,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Icon(
-                              FontAwesomeIcons.linkedin,
-                              color: main_color,
-                            ),
-                            SizedBox(
-                              width: 4,
-                            ),
-                            Text("nich-otieno"),
-                          ],
-                        ),
+                        ContactItem(
+                            icon: FontAwesomeIcons.linkedin,
+                            title: "nich-otieno"),
                       ],
                     ),
                     const SizedBox(
@@ -177,36 +139,15 @@ class MainDashboard extends StatelessWidget {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Icon(
-                              FontAwesomeIcons.github,
-                              color: main_color,
-                            ),
-                            SizedBox(
-                              width: 4,
-                            ),
-                            Text("Crucialjun"),
-                          ],
-                        ),
-                        const SizedBox(
+                      children: const [
+                        ContactItem(
+                            icon: FontAwesomeIcons.github, title: "Crucialjun"),
+                        SizedBox(
                           width: 16,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Icon(
-                              FontAwesomeIcons.stackOverflow,
-                              color: main_color,
-                            ),
-                            SizedBox(
-                              width: 4,
-                            ),
-                            Text("crucialjun"),
-                          ],
-                        ),
+                        ContactItem(
+                            icon: FontAwesomeIcons.stackOverflow,
+                            title: "crucialjun")
                       ],
                     ),
                     const SizedBox(
@@ -214,36 +155,16 @@ class MainDashboard extends StatelessWidget {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Icon(
-                              FontAwesomeIcons.youtube,
-                              color: main_color,
-                            ),
-                            SizedBox(
-                              width: 4,
-                            ),
-                            Text("@Crucialtech"),
-                          ],
-                        ),
-                        const SizedBox(
+                      children: const [
+                        ContactItem(
+                            icon: FontAwesomeIcons.youtube,
+                            title: "@Crucialtech"),
+                        SizedBox(
                           width: 16,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Icon(
-                              FontAwesomeIcons.hackerrank,
-                              color: main_color,
-                            ),
-                            SizedBox(
-                              width: 4,
-                            ),
-                            Text("Crucialjun"),
-                          ],
-                        ),
+                        ContactItem(
+                            icon: FontAwesomeIcons.hackerrank,
+                            title: "Crucialjun")
                       ],
                     ),
                     const SizedBox(
@@ -296,110 +217,25 @@ class MainDashboard extends StatelessWidget {
                           childAspectRatio: (1 / 0.8),
                           //shrinkWrap: true,
                           children: [
-                            Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                  color: main_color,
-                                  borderRadius: BorderRadius.circular(24)),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  SvgPicture.asset(
-                                    "assets/experience_icon.svg",
-                                    color: Colors.white,
-                                    height: 48,
-                                  ),
-                                  const SizedBox(
-                                    height: 12,
-                                  ),
-                                  const Text(
-                                    "Experience",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(color: Colors.white),
-                                  )
-                                ],
-                              ),
+                            InkWell(
+                              onTap: (() {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) =>
+                                        const ExperienceScreen()));
+                              }),
+                              child: const CvItem(
+                                  iconAssetPath: "assets/experience_icon.svg",
+                                  title: "Experience"),
                             ),
-                            Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                  color: main_color,
-                                  borderRadius: BorderRadius.circular(24)),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  SvgPicture.asset(
-                                    "assets/student_icon.svg",
-                                    color: Colors.white,
-                                    height: 48,
-                                  ),
-                                  const SizedBox(
-                                    height: 12,
-                                  ),
-                                  const Text(
-                                    "Background",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(color: Colors.white),
-                                  )
-                                ],
-                              ),
-                            ),
-                            Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                  color: main_color,
-                                  borderRadius: BorderRadius.circular(24)),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  SvgPicture.asset(
-                                    "assets/intrest_icon.svg",
-                                    color: Colors.white,
-                                    height: 48,
-                                  ),
-                                  const SizedBox(
-                                    height: 12,
-                                  ),
-                                  const Text(
-                                    "Intrests",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(color: Colors.white),
-                                  )
-                                ],
-                              ),
-                            ),
-                            Container(
-                              width: 40,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                  color: main_color,
-                                  borderRadius: BorderRadius.circular(24)),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  SvgPicture.asset(
-                                    "assets/portfolio_icon.svg",
-                                    color: Colors.white,
-                                    height: 48,
-                                  ),
-                                  const SizedBox(
-                                    height: 12,
-                                  ),
-                                  const Text(
-                                    "Projects",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(color: Colors.white),
-                                  )
-                                ],
-                              ),
-                            ),
+                            const CvItem(
+                                iconAssetPath: "assets/student_icon.svg",
+                                title: "Background"),
+                            const CvItem(
+                                iconAssetPath: "assets/intrest_icon.svg",
+                                title: "Intrests"),
+                            const CvItem(
+                                iconAssetPath: "assets/portfolio_icon.svg",
+                                title: "Projects"),
                           ],
                         )),
                   )),
