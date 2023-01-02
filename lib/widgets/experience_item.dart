@@ -20,27 +20,36 @@ class ExperienceItem extends StatelessWidget {
         Flexible(
             child: Padding(
           padding: const EdgeInsets.all(12.0),
-          child: Image.asset(assetPath),
+          child: Image.asset(
+            assetPath,
+            width: 48,
+            height: 48,
+          ),
         )),
         const SizedBox(
           width: 8,
         ),
         Padding(
           padding: const EdgeInsets.all(12.0),
-          child: Column(children: [
-            Text(
-              position,
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
-            ),
-            Text(
-              company,
-              style: const TextStyle(fontWeight: FontWeight.w400, fontSize: 12),
-            ),
-            Text(
-              period,
-              style: const TextStyle(fontSize: 10),
-            )
-          ]),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  position,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 14),
+                ),
+                Text(
+                  company,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w400, fontSize: 12),
+                ),
+                Text(
+                  period,
+                  style: const TextStyle(fontSize: 10),
+                )
+              ]),
         )
       ],
     );
