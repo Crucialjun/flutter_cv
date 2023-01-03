@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_cv/background_screen.dart';
 import 'package:flutter_cv/experience_screen.dart';
+import 'package:flutter_cv/interests_screen.dart';
 import 'package:flutter_cv/utils/global_constants.dart';
 import 'package:flutter_cv/utils/main_dashboard_controller.dart';
 import 'package:flutter_cv/widgets/contact_item.dart';
@@ -238,9 +239,16 @@ class MainDashboard extends StatelessWidget {
                                   iconAssetPath: "assets/student_icon.svg",
                                   title: "Background"),
                             ),
-                            const CvItem(
-                                iconAssetPath: "assets/intrest_icon.svg",
-                                title: "Intrests"),
+                            InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) =>
+                                        const InterestsScreen()));
+                              },
+                              child: const CvItem(
+                                  iconAssetPath: "assets/intrest_icon.svg",
+                                  title: "Intrests"),
+                            ),
                             const CvItem(
                                 iconAssetPath: "assets/portfolio_icon.svg",
                                 title: "Projects"),

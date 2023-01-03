@@ -14,3 +14,9 @@ My Cv is a flutter project to create my CV in  form of an app using Flutter
 ## Experience Page
 
 ![alt text](https://lh6.googleusercontent.com/Rd1gfS0vvtGJ4ejNzoVDas2S1GMbsMlXHHkGP9XwHjUrEWMyjhB45-5aMrdOogmJCys=w2400)
+
+## Education Background Page
+
+![alt text](https://lh6.googleusercontent.com/oNijBsVTME05BEgovR4MlaGdmeAhFYjQmQeP42LGKeG5d0ZARA9aqzJWilVL5ktPhzg=w2400)
+
+![alt text](https://drive.google.com/file/d/1DmWnAPn0NRM0ssi9HXk-3fCJTn24Jy0r/view?usp=sharing)
