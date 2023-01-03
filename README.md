@@ -19,4 +19,4 @@ My Cv is a flutter project to create my CV in  form of an app using Flutter
 
 ![alt text](https://lh6.googleusercontent.com/oNijBsVTME05BEgovR4MlaGdmeAhFYjQmQeP42LGKeG5d0ZARA9aqzJWilVL5ktPhzg=w2400)
 
-![alt text](https://drive.google.com/file/d/1DmWnAPn0NRM0ssi9HXk-3fCJTn24Jy0r/view?usp=sharing)
+![alt text](https://lh3.googleusercontent.com/dCEMNmyshwyJWikY-tvgCjYUxOCaHJ7SXPx_0VLWbmXSKDR8-36DoV8bwnuzGmhGJDE=w2400)
