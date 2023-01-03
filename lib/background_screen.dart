@@ -109,18 +109,38 @@ class BackgroundScreen extends StatelessWidget {
                           ),
                         ),
                         SkillsItem(
-                          assetPath: "assets/flutter.svg",
+                          assetPath: "assets/flutter_logo.svg",
                           skillText: "Flutter Development",
+                          rating: 5,
                         ),
                         SizedBox(
                           height: 16,
                         ),
-                        ExperienceItem(
-                          assetPath: "assets/education.jpg",
-                          position: "Arknet Computer College",
-                          company: "Computer and Computer Applications",
-                          period: "March 2009 - Nov 2009",
-                        )
+                        SkillsItem(
+                          assetPath: "assets/android_logo.svg",
+                          skillText: "Android Development (Kotlin)",
+                          rating: 4,
+                        ),
+                        SkillsItem(
+                          assetPath: "assets/android_logo.svg",
+                          skillText: "Android Development (Java)",
+                          rating: 2,
+                        ),
+                        SkillsItem(
+                          assetPath: "assets/python_logo.svg",
+                          skillText: "Python",
+                          rating: 3,
+                        ),
+                        SkillsItem(
+                          assetPath: "assets/network.svg",
+                          skillText: "Networking and Network Management",
+                          rating: 4,
+                        ),
+                        SkillsItem(
+                          assetPath: "assets/computer_logo.svg",
+                          skillText: "Computer Applications",
+                          rating: 4,
+                        ),
                       ],
                     )),
               ),

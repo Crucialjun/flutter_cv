@@ -6,8 +6,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 class SkillsItem extends StatelessWidget {
   final String skillText;
   final String assetPath;
+  final double rating;
   const SkillsItem(
-      {super.key, required this.skillText, required this.assetPath});
+      {super.key,
+      required this.skillText,
+      required this.assetPath,
+      required this.rating});
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +21,8 @@ class SkillsItem extends StatelessWidget {
           padding: const EdgeInsets.all(12.0),
           child: SvgPicture.asset(
             assetPath,
-            height: 68,
             width: 68,
+            fit: BoxFit.scaleDown,
           ),
         ),
         const SizedBox(
@@ -39,7 +43,7 @@ class SkillsItem extends StatelessWidget {
                   height: 8,
                 ),
                 RatingBarIndicator(
-                  rating: 4,
+                  rating: rating,
                   itemBuilder: (context, index) => const Icon(
                     Icons.star,
                     color: main_color,
