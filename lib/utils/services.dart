@@ -3,7 +3,9 @@ import 'package:url_launcher/url_launcher.dart';
 class Services {
   Future launchInputUrl(String url) async {
     Uri fullUrl = Uri.parse(url);
+    
     if (await canLaunchUrl(fullUrl)) {
+      
       await launchUrl(
         fullUrl,
         mode: LaunchMode.inAppWebView,
