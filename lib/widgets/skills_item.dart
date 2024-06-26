@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cv/utils/global_constants.dart';
+import 'package:flutter_cv/constants/app_colors.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -46,7 +46,7 @@ class SkillsItem extends StatelessWidget {
                   rating: rating,
                   itemBuilder: (context, index) => const Icon(
                     Icons.star,
-                    color: main_color,
+                    color: AppColors.mainColor,
                   ),
                   itemCount: 5,
                   itemSize: 24.0,

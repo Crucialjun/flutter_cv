@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cv/utils/global_constants.dart';
+import 'package:flutter_cv/constants/app_colors.dart';
 
 class InterestItem extends StatelessWidget {
   final IconData icon;
@@ -17,14 +17,14 @@ class InterestItem extends StatelessWidget {
         shadowColor: Colors.blueGrey,
         borderOnForeground: true,
         margin: const EdgeInsets.all(2),
-        surfaceTintColor: main_color,
+        surfaceTintColor: AppColors.mainColor,
         child: Padding(
           padding: const EdgeInsets.all(14.0),
           child: Row(
             children: [
               Icon(
                 icon,
-                color: main_color,
+                color: AppColors.mainColor,
                 size: 48,
               ),
               const SizedBox(

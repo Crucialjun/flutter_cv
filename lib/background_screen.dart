@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cv/utils/global_constants.dart';
+import 'package:flutter_cv/constants/app_colors.dart';
 import 'package:flutter_cv/widgets/experience_item.dart';
 import 'package:flutter_cv/widgets/skills_item.dart';
 
@@ -12,7 +12,7 @@ class BackgroundScreen extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: main_color,
+        backgroundColor: AppColors.mainColor,
         elevation: 0.0,
         toolbarHeight: height * 0.1,
         title: const Text("Background"),
@@ -33,10 +33,10 @@ class BackgroundScreen extends StatelessWidget {
                         color: Colors.black26)
                   ]),
               width: width,
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Padding(
                     padding: EdgeInsets.only(top: 8.0, left: 8.0),
                     child: Text(
@@ -90,10 +90,10 @@ class BackgroundScreen extends StatelessWidget {
                               color: Colors.black26)
                         ]),
                     width: width,
-                    child: Column(
+                    child: const Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Padding(
                           padding: EdgeInsets.only(top: 8.0, left: 8.0),
                           child: Text(

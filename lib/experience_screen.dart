@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_cv/utils/global_constants.dart';
+import 'package:flutter_cv/constants/app_colors.dart';
 import 'package:flutter_cv/widgets/experience_item.dart';
 import 'package:flutter_cv/widgets/experience_text_widget.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ExperienceScreen extends StatelessWidget {
   const ExperienceScreen({super.key});
@@ -12,7 +13,7 @@ class ExperienceScreen extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: main_color,
+        backgroundColor: AppColors.mainColor,
         elevation: 0.0,
         toolbarHeight: height * 0.1,
         title: const Text("Experience"),
@@ -36,8 +37,8 @@ class ExperienceScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Padding(
+                children: [
+                  const Padding(
                     padding: EdgeInsets.only(top: 8.0, left: 8.0),
                     child: Text(
                       "Work Experience",
@@ -45,22 +46,40 @@ class ExperienceScreen extends StatelessWidget {
                           TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
                     ),
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 8.0),
                     child: Divider(
                       color: Colors.black26,
                     ),
                   ),
-                  ExperienceItem(
+                  const ExperienceItem(
+                    assetPath: "assets/fine_looks_logo.png",
+                    position: "Frontend / Mobile Developer",
+                    company: "FineLooks",
+                    period: "Oct 2023 - To Date",
+                  ),
+                  SizedBox(
+                    height: 16.h,
+                  ),
+                  const ExperienceItem(
+                    assetPath: "assets/wiz_stems_logo.png",
+                    position: "Flutter Consultant",
+                    company: "Wiz Systems USA",
+                    period: "January 2024 - March 2024",
+                  ),
+                  SizedBox(
+                    height: 16.h,
+                  ),
+                  const ExperienceItem(
                     assetPath: "assets/thebrand.png",
                     position: "Main Mobile Developer",
                     company: "The Brand Kenya",
                     period: "Dec 2022 - To Date",
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 16,
                   ),
-                  ExperienceItem(
+                  const ExperienceItem(
                     assetPath: "assets/achiel.png",
                     position: "Network Administrator",
                     company: "Achiel Technology Solutions",
@@ -68,13 +87,13 @@ class ExperienceScreen extends StatelessWidget {
                   )
                 ],
               )),
-          Flexible(
+          const Flexible(
             child: Scrollbar(
               thickness: 8,
               thumbVisibility: true,
               child: SingleChildScrollView(
                 child: Column(
-                  children: const [
+                  children: [
                     ExperienceTextWidget(
                       text:
                           "I am a highly skilled Flutter developer and network administrator. In my roles, I was responsible for designing, developing, and maintaining mobile applications using the Flutter framework, as well as providing network support to ensure the smooth operation of our company's computer systems and networks.",
@@ -101,7 +120,7 @@ class ExperienceScreen extends StatelessWidget {
               Container(
                 height: height * 0.2,
                 width: double.infinity,
-                color: main_color,
+                color: AppColors.mainColor,
               ),
               Positioned(
                 right: 0,

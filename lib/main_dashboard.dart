@@ -4,14 +4,15 @@ import 'package:flutter_cv/background_screen.dart';
 import 'package:flutter_cv/experience_screen.dart';
 import 'package:flutter_cv/interests_screen.dart';
 import 'package:flutter_cv/portfolio_screen.dart';
-import 'package:flutter_cv/utils/global_constants.dart';
-import 'package:flutter_cv/utils/main_dashboard_controller.dart';
+import 'package:flutter_cv/constants/app_colors.dart';
+
 import 'package:flutter_cv/widgets/contact_item.dart';
 import 'package:flutter_cv/widgets/cv_item.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MainDashboard extends StatelessWidget {
-  const MainDashboard({Key? key}) : super(key: key);
+  const MainDashboard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +21,10 @@ class MainDashboard extends StatelessWidget {
         toolbarHeight: 0.0,
         elevation: 0.0,
         systemOverlayStyle: const SystemUiOverlayStyle(
-            statusBarColor: main_color,
+            statusBarColor: AppColors.mainColor,
             statusBarIconBrightness: Brightness.light,
             statusBarBrightness: Brightness.light),
-        backgroundColor: main_color,
+        backgroundColor: AppColors.mainColor,
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -33,35 +34,34 @@ class MainDashboard extends StatelessWidget {
                 height: MediaQuery.of(context).size.height,
                 color: Colors.white,
               ),
-              Container(height: 650, color: background_grey),
               Container(
-                height: 80,
+                height: 80.h,
                 decoration: const BoxDecoration(
-                    color: main_color,
+                    color: AppColors.mainColor,
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(24),
                         bottomRight: Radius.circular(24))),
               ),
-              const Positioned(
+              Positioned(
                 left: 0,
                 right: 0,
-                top: 20,
+                top: 20.h,
                 child: CircleAvatar(
-                  backgroundColor: background_grey,
-                  radius: 52,
+                  backgroundColor: AppColors.backgroundGrey,
+                  radius: 52.r,
                   child: CircleAvatar(
-                    radius: 48,
-                    backgroundImage: AssetImage('assets/profile.jpeg'),
+                    radius: 48.r,
+                    backgroundImage: const AssetImage('assets/profile.jpeg'),
                   ),
                 ),
               ),
               Positioned(
                 right: 0,
-                top: 120,
+                top: 120.h,
                 left: 0,
-                child: Column(
+                child: const Column(
                   children: [
-                    const Text(
+                    Text(
                       "Nicholas Otieno Ouma",
                       textAlign: TextAlign.center,
                       style: TextStyle(
@@ -69,46 +69,23 @@ class MainDashboard extends StatelessWidget {
                           fontSize: 18,
                           fontWeight: FontWeight.bold),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 4,
                     ),
-                    const Text(
-                      "Android Developer",
+                    Text(
+                      "Native Android Developer",
                       textAlign: TextAlign.center,
                     ),
-                    const Text(
+                    Text(
                       "Flutter Developer",
                       textAlign: TextAlign.center,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text(
-                          "Network Administrator at",
-                          textAlign: TextAlign.center,
-                        ),
-                        InkWell(
-                          onTap: (() {
-                            MainDashBoardController()
-                                .launchSpecifiedUrl('https://flutter.io');
-                          }),
-                          child: const Text(
-                            " Achiel Technology Solutions",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                color: Colors.blue,
-                                fontWeight: FontWeight.w400),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
+                    SizedBox(
                       height: 8,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         ContactItem(
                             icon: FontAwesomeIcons.locationDot,
                             title: "Nairobi, Kenya"),
@@ -120,12 +97,12 @@ class MainDashboard extends StatelessWidget {
                             title: "nich.otieno@gmail.com")
                       ],
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 8,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         ContactItem(
                             icon: FontAwesomeIcons.phone,
                             title: "+254726575615"),
@@ -137,12 +114,12 @@ class MainDashboard extends StatelessWidget {
                             title: "nich-otieno"),
                       ],
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 8,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         ContactItem(
                             icon: FontAwesomeIcons.github, title: "Crucialjun"),
                         SizedBox(
@@ -153,12 +130,12 @@ class MainDashboard extends StatelessWidget {
                             title: "crucialjun")
                       ],
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 8,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         ContactItem(
                             icon: FontAwesomeIcons.youtube,
                             title: "@Crucialtech"),
@@ -170,21 +147,25 @@ class MainDashboard extends StatelessWidget {
                             title: "Crucialjun")
                       ],
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 4,
                     ),
-                    const Padding(
+                    Padding(
                       padding: EdgeInsets.only(left: 16, right: 16),
                       child: Divider(
                         thickness: 2,
                         color: Colors.grey,
                       ),
                     ),
-                    const Padding(
+                    Padding(
                       padding: EdgeInsets.all(8.0),
                       child: LimitedBox(
                         child: Text(
-                          "Methodical,client-focused native Android and Flutter software developer possessing over 8 years of experiencein mobile application development. Excels in every stage of the life cycle of software development, includingdesign creation, coding, debugging, testing, and maintenance.\n\n Proficient with object-oriented programming, Enjoys collaborating with colleagues and building cultures ofcross-functional working to provide a greater platform for the success of projects",
+                          "Dedicated Flutter and Android Native Developer with over 8 "
+                          "years of experience in mobile application development. Adept at "
+                          "all stages of software development, from design creation to maintenance. "
+                          "Proficient in Java, Kotlin, Dart, and Flutter with a passion for  "
+                          "collaborative teamwork and innovate problem-solving.",
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -193,8 +174,8 @@ class MainDashboard extends StatelessWidget {
                 ),
               ),
               Padding(
-                  padding: const EdgeInsets.only(
-                    top: 600,
+                  padding: EdgeInsets.only(
+                    top: 400.h,
                     left: 0,
                     right: 0,
                   ),
@@ -203,11 +184,11 @@ class MainDashboard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(50),
                     ),
                     elevation: 8,
-                    margin: const EdgeInsets.only(left: 20, right: 20),
+                    margin: EdgeInsets.symmetric(horizontal: 20.w),
                     child: Container(
                         decoration: BoxDecoration(
                             color: Colors.white,
-                            border: Border.all(color: background_grey),
+                            border: Border.all(color: AppColors.backgroundGrey),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(24))),
                         width: MediaQuery.of(context).size.width,
