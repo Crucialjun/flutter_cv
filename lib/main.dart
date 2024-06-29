@@ -6,6 +6,7 @@ import 'package:flutter_cv/my_app.dart';
 
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
   options: DefaultFirebaseOptions.currentPlatform,
 );
