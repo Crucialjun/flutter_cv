@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_cv/background_screen.dart';
 import 'package:flutter_cv/constants/app_colors.dart';
 import 'package:flutter_cv/experience_screen.dart';
+import 'package:flutter_cv/features/chat/presentation/chat_screen.dart';
 import 'package:flutter_cv/interests_screen.dart';
 import 'package:flutter_cv/portfolio_screen.dart';
 import 'package:flutter_cv/widgets/contact_item.dart';
@@ -16,6 +17,14 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const ChatScreen()));
+        },
+        label: const Text("Chat with My Cv"),
+        icon: const Icon(Icons.message),
+      ),
       appBar: AppBar(
         toolbarHeight: 0.0,
         elevation: 0.0,
