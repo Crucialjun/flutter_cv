@@ -53,8 +53,8 @@ class BackgroundScreen extends StatelessWidget {
                   ),
                   ExperienceItem(
                     assetPath: "assets/college.jpg",
-                    position: "Kajiado East Technical Institute",
-                    company: "Diploma in I.C.T",
+                    position: "Moi University",
+                    company: "Bachelor of Science in Computer Science",
                     period: "May 2022 - To Date",
                   ),
                   SizedBox(
