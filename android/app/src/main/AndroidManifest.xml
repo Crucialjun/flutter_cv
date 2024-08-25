@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.flutter_cv">
    <application
-        android:label="flutter_cv"
+        android:label="My CV"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
