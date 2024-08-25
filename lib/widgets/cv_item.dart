@@ -24,7 +24,7 @@ class CvItem extends StatelessWidget {
         children: [
           SvgPicture.asset(
             iconAssetPath,
-            color: Colors.white,
+            colorFilter: ColorFilter.mode(Colors.white ,BlendMode.srcIn),
             height: 48,
           ),
           const SizedBox(
